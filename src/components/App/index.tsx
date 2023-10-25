@@ -96,7 +96,7 @@ export function App() {
           <Box>
             <Names />
           </Box>
-          <Box footerAddon={<ImagesPagination />}>
+          <Box headerAddon={<ImagesPagination />} footerAddon={<ImagesPagination />}>
             <Images />
           </Box>
         </div>
