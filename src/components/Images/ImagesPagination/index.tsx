@@ -9,7 +9,6 @@ export default function ImagesPagination() {
   const allPages = new Array(Math.ceil(images.length / imagesPagination.itemsPerPage)).fill('');
 
   const onPageClick = (e: React.MouseEvent) => {
-    console.log(imagesPagination);
     if (e.target instanceof HTMLButtonElement) {
       changePage(Number(e.target.textContent));
     }

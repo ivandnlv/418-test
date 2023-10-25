@@ -3,6 +3,7 @@ import { Box } from '../UI';
 import styles from './App.module.scss';
 import { Images } from '../Images';
 import ImagesPagination from '../Images/ImagesPagination';
+import { Names } from '../Names';
 
 interface IAppContext {
   images: { id: number; url: string; alt: string }[];
@@ -22,39 +23,6 @@ export const AppContext = createContext<IAppContext>({
 });
 
 export function App() {
-  const data = [
-    {
-      id: 1,
-      name: 'Vasyan',
-      age: 32,
-    },
-    {
-      id: 2,
-      name: 'Grisha',
-      age: 12,
-    },
-    {
-      id: 3,
-      name: 'Katya',
-      age: 23,
-    },
-    {
-      id: 4,
-      name: 'Masha',
-      age: 34,
-    },
-    {
-      id: 5,
-      name: 'Jora',
-      age: 4,
-    },
-    {
-      id: 6,
-      name: 'Ivan',
-      age: 23,
-    },
-  ];
-
   const [imagesPagination, setImagesPagination] = useState<IAppContext['imagesPagination']>({
     itemsPerPage: 4,
     page: 1,
@@ -126,11 +94,11 @@ export function App() {
       <AppContext.Provider value={appState}>
         <div className={styles.container}>
           <Box>
-            {data.map((item) => (
-              <div key={item.id}>{item.name}</div>
-            ))}
+            <Names />
           </Box>
-          <Box footerAddon={<ImagesPagination />}>{<Images />}</Box>
+          <Box footerAddon={<ImagesPagination />}>
+            <Images />
+          </Box>
         </div>
       </AppContext.Provider>
     </div>
