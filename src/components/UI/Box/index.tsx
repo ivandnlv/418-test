@@ -6,8 +6,8 @@ import styles from './Box.module.scss';
 
 interface BoxProps {
   children: ReactNode[] | ReactNode;
-  headerAddon?: JSX.Element;
-  footerAddon?: JSX.Element;
+  headerAddon?: ReactNode;
+  footerAddon?: ReactNode;
 }
 
 interface IBoxContext {

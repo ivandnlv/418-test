@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext } from 'react';
+import { useState, createContext } from 'react';
 import { Box } from '../UI';
 import styles from './App.module.scss';
 import { Images } from '../Images';

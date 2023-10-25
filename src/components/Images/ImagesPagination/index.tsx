@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import styles from './ImagesPagination.module.scss';
 import { AppContext } from '../..';
 import Btn from '../../UI/Btn';
